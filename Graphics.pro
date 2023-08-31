@@ -1,5 +1,8 @@
 QT       += core gui
-
+QT       += charts
+QT       += sql
+QT       += widgets
+QT += printsupport
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++17
@@ -13,10 +16,14 @@ SOURCES += \
     win.cpp
 
 HEADERS += \
-    win.h
+    data_reader.h \
+    mvc.h \
+    win.h \
+    drawer.h \
+    ioccontainer.h
 
-FORMS += \
-    win.ui
+
+FORMS +=
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
